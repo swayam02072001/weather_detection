@@ -1,7 +1,3 @@
-Certainly! Here's a draft for the README.md file for your weather detection project using Django:
-
----
-
 # Weather Detection Project using Django
 
 ## Overview
