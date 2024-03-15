@@ -62,6 +62,15 @@ This project is a weather detection web application built using Django, a high-l
 3. View the current temperature, humidity, wind speed, and weather condition for the specified city.
 4. Register and login to save your search history and access it later.
 
+## How to Obtain OpenWeatherMap API Key
+
+To use the OpenWeatherMap API for fetching weather data, you need to obtain an API key. Here's how to get it:
+
+1. Go to the [OpenWeatherMap website](https://home.openweathermap.org/users/sign_up) and sign up for an account if you haven't already.
+2. After signing in, go to your [API keys](https://home.openweathermap.org/api_keys) section.
+3. Generate a new API key by providing a name for it and clicking on the "Generate" button.
+4. Copy the generated API key and paste it into your Django project where you make API requests.
+
 ## Acknowledgments
 
 - Special thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather data API.
