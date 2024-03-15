@@ -32,7 +32,7 @@ This project is a weather detection web application built using Django, a high-l
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/weather-detection.git
+    git clone https://github.com/swayam02072001/weather-detection.git
     ```
 
 2. Navigate to the project directory:
