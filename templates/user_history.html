@@ -1,0 +1,39 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <h1 class="mb-4">History of User</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Humidity</th>
+                    <th scope="col">Weather</th>
+                    <th scope="col">Speed</th>
+                    <th scope="col">Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for obj in LWO %}
+                <tr>
+                    <td>{{ obj.username }}</td>
+                    <td>{{ obj.city }}</td>
+                    <td>{{ obj.temperature }}</td>
+                    <td>{{ obj.humidity }}</td>
+                    <td>{{ obj.weather }}</td>
+                    <td>{{ obj.speed }}</td>
+                    <td>{{ obj.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

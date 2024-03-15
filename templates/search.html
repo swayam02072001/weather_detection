@@ -1,0 +1,98 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+    <style>
+        /* Style for container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for table */
+        .weather-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .weather-table th, .weather-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .weather-table th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for form */
+        .container form {
+            margin-top: 20px;
+        }
+
+        .container form label {
+            margin-right: 10px;
+        }
+
+        .container form input[type="text"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .container form button {
+            padding: 8px 16px;
+            background-color: #dc3545; /* Red color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container form button:hover {
+            background-color: #c82333; /* Darker red color on hover */
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    {% if obj %}
+        <div class="container">
+            <h2>User Weather Data</h2>
+            <table class="weather-table">
+                <tr>
+                    <th>Username</th>
+                    <th>City</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Weather</th>
+                    <th>Speed</th>
+                    <th>Timestamp</th>
+                </tr>
+                <tr>
+                    <td>{{ obj.username }}</td>
+                    <td>{{ obj.city }}</td>
+                    <td>{{ obj.temperature }}°C</td>
+                    <td>{{ obj.humidity }}%</td>
+                    <td>{{ obj.weather }}</td>
+                    <td>{{ obj.speed }} m/s</td>
+                    <td>{{ obj.timestamp }}</td>
+                </tr>
+            </table>
+        </div>
+    {% else %}
+        <div class="container">
+            <h2>Enter City</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <button type="submit" style="background-color: #dc3545;">Confirm</button> <!-- Red button -->
+            </form>
+        </div>
+    {% endif %}
+{% endblock %}

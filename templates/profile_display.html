@@ -1,0 +1,26 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Profile Page</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h1 class="text-center">User Profile</h1>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="{{ PO.profile_pic.url }}" alt="{{ UO.username }}" class="rounded-circle shadow-lg mb-4" style="width: 250px; height: 250px;">
+                        <h2>{{ UO.username }}</h2> <br>
+                        <h4>Contact Information</h4>
+                            <strong>Address:</strong> {{ PO.address }} <br>
+                            <strong>Email: </strong>{{ UO.email }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
