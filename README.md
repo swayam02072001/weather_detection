@@ -68,5 +68,3 @@ This project is a weather detection web application built using Django, a high-l
 - This project was inspired by the desire to create a simple and intuitive weather detection tool using Django.
 
 ---
-
-Feel free to customize the content according to your project's specific details and requirements.
