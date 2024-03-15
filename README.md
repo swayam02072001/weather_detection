@@ -76,4 +76,11 @@ To use the OpenWeatherMap API for fetching weather data, you need to obtain an A
 - Special thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather data API.
 - This project was inspired by the desire to create a simple and intuitive weather detection tool using Django.
 
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request with any improvements or additional features.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ---
